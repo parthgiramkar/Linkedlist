@@ -1,4 +1,5 @@
 #include<iostream>
+//#include<map>
 using namespace std;
 
 class node {
@@ -102,7 +103,26 @@ public:
             curr -> next  = NULL;
             delete curr;
         }
-    }    
+    }
+   // bool detectloop(node *head) {                      //to detect cycle in LL
+    map<node* , bool >visited;
+    node *temp = head;
+    while(temp !=NULL) {
+        //cycle is present
+        if(visited[temp] == true) {
+            return 1;           //return true;
+        }
+        visited[temp]=true;
+        temp=temp->next;
+         
+        if(temp = head) {
+            break;
+        }
+    }
+    return false ;         //no cycle
+    
+    }
+
 }; 
 
 int main() {
@@ -133,5 +153,12 @@ int main() {
     cout << "Head position: " << head->data << endl;
     cout << "Tail position: " << tail->data << endl;
     
+    /*if(nodeptr->detectloop(head) ) {
+        cout <<"Loop detected in linked list." << endl;
+    }
+    else {
+         cout <<"No loop detected in linked list."<< endl;
+    }
+    */	
     return 0;
 }
