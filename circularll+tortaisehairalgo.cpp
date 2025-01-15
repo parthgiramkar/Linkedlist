@@ -99,6 +99,7 @@ bool iscircular(cll *tail) {
 }
 
 
+
 int main() {
     cll *tail=NULL;
     //when list is empty
