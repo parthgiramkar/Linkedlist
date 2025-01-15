@@ -104,7 +104,7 @@ public:
             delete curr;
         }
     }
-   // bool detectloop(node *head) {                      //to detect cycle in LL
+   /* bool detectloop(node *head) {                      //to detect cycle in LL
     map<node* , bool >visited;
     node *temp = head;
     while(temp !=NULL) {
@@ -116,13 +116,13 @@ public:
         temp=temp->next;
          
         if(temp = head) {
-            break;
+            break;         //in case of cll to comeoutof loop
         }
     }
     return false ;         //no cycle
     
     }
-
+   */
 }; 
 
 int main() {
